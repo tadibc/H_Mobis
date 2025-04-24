@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-BlueprintCore.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Games\H_Mobis\Plugins\BlueprintCore\Intermediate\Build\Win64\UE4Editor\Development\BlueprintCore\PCH.BlueprintCore.h.obj"
+"D:\Games\H_Mobis\Plugins\BlueprintCore\Intermediate\Build\Win64\UE4Editor\Development\BlueprintCore\Module.BlueprintCore.cpp.obj"
+"D:\Games\H_Mobis\Plugins\BlueprintCore\Intermediate\Build\Win64\UE4Editor\Development\BlueprintCore\Module.BlueprintCore.gen.cpp.obj"
+"C:\UE_4.27_Oculus\Engine\Intermediate\Build\Win64\UE4Editor\Development\Default.rc2.res"
+/OUT:"D:\Games\H_Mobis\Plugins\BlueprintCore\Intermediate\Build\Win64\UE4Editor\Development\BlueprintCore\UE4Editor-BlueprintCore.lib"

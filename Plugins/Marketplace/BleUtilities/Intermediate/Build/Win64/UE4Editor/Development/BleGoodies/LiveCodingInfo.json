@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.BleGoodies.cpp.obj": [
+			"BleGoodies.cpp.obj",
+			"BleUtils.cpp.obj"
+		],
+		"Module.BleGoodies.gen.cpp.obj": [
+			"BleDeviceInterface.gen.cpp.obj",
+			"BleGoodies.init.gen.cpp.obj",
+			"BleManagerInterface.gen.cpp.obj",
+			"BleUtils.gen.cpp.obj"
+		]
+	}
+}

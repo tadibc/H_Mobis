@@ -1,0 +1,6 @@
+{
+	"OutputFiles": [
+		"Module.DTAes.cpp.o",
+		"Module.DTAes.gen.cpp.o"
+	]
+}

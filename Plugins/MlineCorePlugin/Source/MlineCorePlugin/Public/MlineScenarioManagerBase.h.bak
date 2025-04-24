@@ -1,0 +1,293 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include <MlineScenarioActorBase.h>
+#include "MlineScenarioManagerBase.generated.h"
+
+UENUM(BlueprintType, meta = (Bitflags, UseEnumValuesAsMaskValuesInEditor = "true"))
+enum class ESceneEvent : uint8
+{
+	None,
+	Narration = 1 << 0,
+	Move = 1 << 1,
+	Fade = 1 << 2,
+	Interaction = 1 << 3,
+	LoadLevel = 1 << 4
+};
+ENUM_CLASS_FLAGS(ESceneEvent)
+
+#pragma region EventEnum
+UENUM(BlueprintType)
+enum class EMoveTypeEunm : uint8
+{
+	Teleport,
+	SplineMove
+};
+
+UENUM(BlueprintType)
+enum class EMoveTargetEunm : uint8
+{
+	Player,
+	Actor,
+	All
+};
+
+UENUM(BlueprintType)
+enum class EFadeTypeEunm : uint8
+{
+	FadeOut,
+	FadeIn,
+};
+
+UENUM(BlueprintType)
+enum class EInteractionCountTypeEunm : uint8
+{
+	All_Interaction,
+	Count_Interaction
+};
+
+UENUM(BlueprintType)
+enum class ELevelLoadTypeEunm : uint8
+{
+	OpenLevel,
+	LoadLevel,
+	UnLoadLevel
+};
+#pragma endregion
+
+USTRUCT(BlueprintType)
+struct FNarrationData
+{
+	GENERATED_BODY()
+public:
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Narration")
+		TArray<FString> Narration_ID;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Narration")
+		bool bIsEnd_Play_Next = true;
+
+	//EditAnywhere
+	//UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Narration", meta = (UseComponentPicker, AllowAnyActor, AllowedClasses = "AudioComponent"))
+};
+
+USTRUCT(BlueprintType)
+struct FMoveData
+{
+	GENERATED_BODY()
+public:
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Move")
+		EMoveTargetEunm Move_Target = EMoveTargetEunm::Player;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Move", meta = (EditCondition = "Move_Target != EMoveTargetEunm::Player", EditConditionHides))
+		AActor* Move_Actor = nullptr;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Move")
+		EMoveTypeEunm Move_Type = EMoveTypeEunm::Teleport;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Move", meta = (EditCondition = "Move_Type == EMoveTargetEunm::Teleport", EditConditionHides))
+		bool bIsFadeTeleport = true;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Move", meta = (EditCondition = "Move_Type == EMoveTargetEunm::Teleport", EditConditionHides))
+		AActor* Teleport_Point = nullptr;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Move", meta = (EditCondition = "Move_Type == EMoveTargetEunm::SplineMove", EditConditionHides))
+		AActor* Spline_Actor = nullptr;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Move", meta = (EditCondition = "Move_Type == EMoveTargetEunm::SplineMove", EditConditionHides))
+		float SplineTime = 0.f;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Move", meta = (EditCondition = "Move_Type == EMoveTargetEunm::SplineMove", EditConditionHides))
+		bool bIsPawnSplineRotator = false;
+};
+
+USTRUCT(BlueprintType)
+struct FFadeData
+{
+	GENERATED_BODY()
+public:
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Fade")
+		EFadeTypeEunm Fade_Type = EFadeTypeEunm::FadeOut;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Fade")
+		float Fade_Time = 0.f;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Fade")
+		FLinearColor Fade_Color;
+};
+
+USTRUCT(BlueprintType)
+struct FInteractionData
+{
+	GENERATED_BODY()
+public:
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Interaction")
+		TArray<AMlineScenarioActorBase*> IntaractionActor;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Interaction")
+		EInteractionCountTypeEunm Interaction_Count_Type = EInteractionCountTypeEunm::All_Interaction;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|Interaction", meta = (EditCondition = "Interaction_Count_Type == EInteractionCountTypeEunm::Count_Interaction", EditConditionHides))
+		int End_Count_Interaction = 1;
+
+	UPROPERTY(BlueprintReadWrite, Category = "MlineScenarioEvent|Scene|Step|Interaction")
+		int Interaction_Array_Num = 0;
+};
+
+USTRUCT(BlueprintType)
+struct FLoadLevelData
+{
+	GENERATED_BODY()
+public:
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|LoadLevel")
+		ELevelLoadTypeEunm Level_Type = ELevelLoadTypeEunm::OpenLevel;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|LoadLevel", meta = (EditCondition = "Level_Type == ELevelLoadTypeEunm::OpenLevel", EditConditionHides))
+		FName Open_Level_Name;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step|LoadLevel", meta = (EditCondition = "Level_Type != ELevelLoadTypeEunm::OpenLevel", EditConditionHides))
+		TArray<FName> Level_Name;
+
+	UPROPERTY(BlueprintReadWrite, Category = "MlineScenarioEvent|Scene|Step|LoadLevel")
+		int Level_Array_Num = 0;
+
+};
+
+
+USTRUCT(BlueprintType)
+struct FStepEventData
+{
+	GENERATED_BODY()
+public:
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step", meta = (Bitmask, BitmaskEnum = ESceneEvent))
+		int32 SceneEventFlag;
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step", meta = (Editcondition = "SceneEventFlag & ESceneEvent::Narration", EditConditionHides))
+		FNarrationData Narration;
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step", meta = (Editcondition = "SceneEventFlag & ESceneEvent::Move", EditConditionHides))
+		FMoveData Move;
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step", meta = (Editcondition = "SceneEventFlag & ESceneEvent::Fade", EditConditionHides))
+		FFadeData Fade;
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step", meta = (Editcondition = "SceneEventFlag & ESceneEvent::Interaction", EditConditionHides))
+		FInteractionData InteractionActor;
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene|Step", meta = (Editcondition = "SceneEventFlag & ESceneEvent::LoadLevel", EditConditionHides))
+		FLoadLevelData LoadLevel;
+
+	//UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineEvent|Sound", meta = (UseComponentPicker, AllowAnyActor, AllowedClasses = "AudioComponent"))
+	//	FComponentReference AudioComponent;
+	//UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	//	float StartTime = 0.0f;
+
+};
+
+USTRUCT(BlueprintType)
+struct FSceneEventData
+{
+	GENERATED_BODY()
+public:
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent|Scene")
+		TArray<FStepEventData> Step;
+
+};
+
+
+USTRUCT(BlueprintType)
+struct FSceneActorConditionData
+{
+	GENERATED_BODY()
+public:
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioActor|Data", meta = (UseComponentPicker, AllowAnyActor, AllowedClasses = "AudioComponent"))
+		bool isVisible;
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioActor|Data", meta = (UseComponentPicker, AllowAnyActor, AllowedClasses = "AudioComponent"))
+		bool transformOverride;
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioActor|Data", meta = (UseComponentPicker, AllowAnyActor, AllowedClasses = "AudioComponent"))
+		FTransform SetNewTransform;
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioActor|Data", meta = (UseComponentPicker, AllowAnyActor, AllowedClasses = "AudioComponent"))
+		bool isHighlight;
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioActor|Data", meta = (UseComponentPicker, AllowAnyActor, AllowedClasses = "AudioComponent"))
+		bool isGuideArrow;
+
+};
+
+USTRUCT(BlueprintType)
+struct FSceneConditionData
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioActor|Data")
+		TMap<AActor*, FSceneActorConditionData> sceneConditonData;
+};
+
+UCLASS()
+class MLINECOREPLUGIN_API AMlineScenarioManagerBase : public AActor
+{
+	GENERATED_BODY()
+
+protected:
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "MlineScenarioEvent")
+		void MoveStep_BP(int CurrentScene, int CurrentStep);
+public:
+	// Sets default values for this actor's properties
+	AMlineScenarioManagerBase();
+
+
+	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "MlineScenarioEvent")
+		int currentScene_cpp;
+	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "MlineScenarioEvent")
+		int currentStep_cpp;
+
+	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "MlineScenarioEvent")
+		TArray<AMlineScenarioActorBase*> eventActors_cpp;
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioEvent")
+		TArray<FSceneEventData> ScenarioEvent_cpp;
+
+	UFUNCTION(BlueprintCallable, Category = "MlineScenarioEvent")
+		void StartStep_cpp(int Scene, int Step);
+	UFUNCTION(BlueprintCallable, Category = "MlineScenarioEvent")
+		void MoveStep_cpp(int Scene, int Step);
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MlineScenarioEvent", meta = (Bitmask, BitmaskEnum = ESceneEvent, HideInDetailPanel))
+		int32 EventChecker;
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "MlineScenarioEvent")
+		void CallNarration(FNarrationData data);
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "MlineScenarioEvent")
+		void CallMove(FMoveData data);
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "MlineScenarioEvent")
+		void CallFade(FFadeData data);
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "MlineScenarioEvent")
+		void CallInteraction(FInteractionData data);
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "MlineScenarioEvent")
+		void CallLocaLevel(FLoadLevelData data);
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, Category = "MlineScenarioData")
+		TArray<FSceneConditionData> scenarioData_cpp;
+
+
+
+	//Editor Function
+public : 
+	UFUNCTION(BlueprintCallable, CallInEditor, Category = "MlineScenarioData")
+		void SaveCurrentData_cpp();
+	UFUNCTION(BlueprintCallable, CallInEditor, Category = "MlineScenarioData")
+		void SetEventActors_cpp();
+
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+public:
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+	void CallFunctionByName(UObject* object, FString FunctionData);
+
+};

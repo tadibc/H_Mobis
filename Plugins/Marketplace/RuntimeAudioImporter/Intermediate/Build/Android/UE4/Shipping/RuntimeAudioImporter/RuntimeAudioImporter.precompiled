@@ -1,0 +1,8 @@
+{
+	"OutputFiles": [
+		"Module.RuntimeAudioImporter.cppa7.o",
+		"Module.RuntimeAudioImporter.cppa8.o",
+		"Module.RuntimeAudioImporter.gen.cppa7.o",
+		"Module.RuntimeAudioImporter.gen.cppa8.o"
+	]
+}

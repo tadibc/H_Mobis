@@ -1,0 +1,38 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "DTAes",
+	"Description": "AES Encrypt Decrypt / UE4",
+	"Category": "DT",
+	"CreatedBy": "Dexter Wan",
+	"CreatedByURL": "45141961@qq.com",
+	"DocsURL": "",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/a47320428e274ede92ced79fb4ee1028",
+	"SupportURL": "",
+	"EngineVersion": "4.27.2",
+	"CanContainContent": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "DTAes",
+			"Type": "Runtime",
+			"LoadingPhase": "PostConfigInit",
+			"WhitelistPlatforms": [
+				"Win32",
+				"Win64",
+				"HoloLens",
+				"Mac",
+				"XboxOne",
+				"PS4",
+				"IOS",
+				"Android",
+				"Linux",
+				"AllDesktop",
+				"TVOS",
+				"Switch",
+				"Lumin"
+			]
+		}
+	]
+}

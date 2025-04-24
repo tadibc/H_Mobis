@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MLineSimulator.cpp.obj": [
+			"MLineSimulatorModule.cpp.obj",
+			"Simulator.cpp.obj"
+		],
+		"Module.MLineSimulator.gen.cpp.obj": [
+			"MLineSimulator.init.gen.cpp.obj",
+			"Simulator.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"BuildId": "1d64ff86-ed10-40e1-a642-d91807e43442",
+	"Modules": 
+	{
+		"TcpSocketPlugin": "UE4Editor-TcpSocketPlugin.dll"
+	}
+}

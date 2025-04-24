@@ -1,0 +1,8 @@
+{
+	"BuildId": "1d64ff86-ed10-40e1-a642-d91807e43442",
+	"Modules": 
+	{
+		"BlueprintCore": "UE4Editor-BlueprintCore.dll",
+		"BlueprintCoreEditor": "UE4Editor-BlueprintCoreEditor.dll"
+	}
+}

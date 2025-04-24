@@ -1,0 +1,25 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MlineCorePlugin.cpp.obj": [
+			"CustomOculusInputFunctionLibrary.cpp.obj",
+			"MlineCorePlugin.cpp.obj",
+			"MlineEventActorBase.cpp.obj",
+			"MlineScenarioActorBase.cpp.obj",
+			"MlineScenarioManagerBase.cpp.obj",
+			"MlineScenarioManagerController.cpp.obj",
+			"MlineTriggerCustomEvent.cpp.obj"
+		],
+		"Module.MlineCorePlugin.gen.cpp.obj": [
+			"CustomOculusInputFunctionLibrary.gen.cpp.obj",
+			"MlineCorePlugin.init.gen.cpp.obj",
+			"MlineEventActorBase.gen.cpp.obj",
+			"MlineEventTypes.gen.cpp.obj",
+			"MlineScenarioActorBase.gen.cpp.obj",
+			"MlineScenarioManagerBase.gen.cpp.obj",
+			"MlineScenarioManagerController.gen.cpp.obj",
+			"MlineScenarioTypes.gen.cpp.obj",
+			"MlineTriggerCustomEvent.gen.cpp.obj"
+		]
+	}
+}

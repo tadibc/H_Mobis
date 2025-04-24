@@ -1,0 +1,38 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.9",
+	"FriendlyName": "BlueprintCore",
+	"Description": "eelDev",
+	"Category": "eelDev Plugins",
+	"CreatedBy": "eelDev",
+	"CreatedByURL": "https://eeldev.com",
+	"DocsURL": "https://eeldev.com",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/a7971e07a8e6479baa28b653faf59b06",
+	"SupportURL": "https://eeldev.com",
+	"EngineVersion": "4.27.2",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "BlueprintCore",
+			"Type": "Runtime",
+			"LoadingPhase": "EarliestPossible",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Linux",
+				"Mac"
+			]
+		},
+		{
+			"Name": "BlueprintCoreEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Linux",
+				"Mac"
+			]
+		}
+	]
+}

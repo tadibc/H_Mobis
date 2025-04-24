@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-BlueprintCoreEditor.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\UE_4.27_Oculus\Engine\Intermediate\Build\Win64\UE4Editor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.obj"
+"D:\Games\H_Mobis\Plugins\BlueprintCore\Intermediate\Build\Win64\UE4Editor\Development\BlueprintCoreEditor\Module.BlueprintCoreEditor.cpp.obj"
+"C:\UE_4.27_Oculus\Engine\Intermediate\Build\Win64\UE4Editor\Development\Default.rc2.res"
+/OUT:"D:\Games\H_Mobis\Plugins\BlueprintCore\Intermediate\Build\Win64\UE4Editor\Development\BlueprintCoreEditor\UE4Editor-BlueprintCoreEditor.lib"

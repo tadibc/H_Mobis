@@ -1,0 +1,8 @@
+{
+	"OutputFiles": [
+		"Module.MlineCorePlugin.cppa7.o",
+		"Module.MlineCorePlugin.cppa8.o",
+		"Module.MlineCorePlugin.gen.cppa7.o",
+		"Module.MlineCorePlugin.gen.cppa8.o"
+	]
+}

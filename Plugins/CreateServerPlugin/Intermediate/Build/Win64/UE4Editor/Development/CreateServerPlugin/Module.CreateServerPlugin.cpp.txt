@@ -1,0 +1,12 @@
+D:\H_Mobis\Plugins\CreateServerPlugin\Intermediate\Build\Win64\UE4Editor\Development\CreateServerPlugin\Definitions.CreateServerPlugin.h
+D:/H_Mobis/Plugins/CreateServerPlugin/Source/CreateServerPlugin/Private/CreateServerPlugin.cpp
+D:\H_Mobis\Plugins\CreateServerPlugin\Source\CreateServerPlugin\Public\CreateServerPlugin.h
+D:/H_Mobis/Plugins/CreateServerPlugin/Source/CreateServerPlugin/Private/ServerFunctionLibrary.cpp
+D:\H_Mobis\Plugins\CreateServerPlugin\Source\CreateServerPlugin\Public\ServerFunctionLibrary.h
+D:\H_Mobis\Plugins\CreateServerPlugin\Intermediate\Build\Win64\UE4Editor\Inc\CreateServerPlugin\ServerFunctionLibrary.generated.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\UE_4.27_Oculus\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\UE_4.27_Oculus\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Sockets\Public\SocketSubsystem.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Sockets\Public\AddressInfoTypes.h

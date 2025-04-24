@@ -1,0 +1,32 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.HapticsManager.cpp.obj": [
+			"AndroidHapticLibrary.cpp.obj",
+			"BhapticsLibrary.cpp.obj",
+			"BhapticsRequestLibrary.cpp.obj",
+			"BhapticsUtils.cpp.obj",
+			"FeedbackFile.cpp.obj",
+			"HapticDevice.cpp.obj",
+			"HapticSettings.cpp.obj",
+			"HapticsManager.cpp.obj",
+			"HapticsManagerActor.cpp.obj"
+		],
+		"Module.HapticsManager.gen.cpp.obj": [
+			"AndroidHapticLibrary.gen.cpp.obj",
+			"BhapticsRequestLibrary.gen.cpp.obj",
+			"FeedbackFile.gen.cpp.obj",
+			"FootFeedbackFile.gen.cpp.obj",
+			"GloveFeedbackFile.gen.cpp.obj",
+			"HandFeedbackFile.gen.cpp.obj",
+			"HapticDevice.gen.cpp.obj",
+			"HapticSettings.gen.cpp.obj",
+			"HapticsManager.init.gen.cpp.obj",
+			"HapticsManagerActor.gen.cpp.obj",
+			"HapticStructures.gen.cpp.obj",
+			"TactalFeedbackFile.gen.cpp.obj",
+			"TactosyFeedbackFile.gen.cpp.obj",
+			"TactotFeedbackFile.gen.cpp.obj"
+		]
+	}
+}

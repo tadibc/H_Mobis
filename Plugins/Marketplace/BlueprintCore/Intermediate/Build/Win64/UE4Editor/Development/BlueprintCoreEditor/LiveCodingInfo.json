@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.BlueprintCoreEditor.cpp.obj": [
+			"BlueprintCoreEditorModule.cpp.obj",
+			"BlueprintCoreEditorTypes.cpp.obj",
+			"BlueprintCoreStyle.cpp.obj",
+			"SBlueprintCoreBlueprintInformation.cpp.obj",
+			"SBlueprintCoreBlueprintSecurity.cpp.obj",
+			"SBlueprintCoreBlueprintSettings.cpp.obj",
+			"SBlueprintCoreCommonWindows.cpp.obj",
+			"SBlueprintCoreWindow.cpp.obj"
+		]
+	}
+}

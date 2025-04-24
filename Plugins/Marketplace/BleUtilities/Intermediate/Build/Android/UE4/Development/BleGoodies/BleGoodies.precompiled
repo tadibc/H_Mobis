@@ -1,0 +1,8 @@
+{
+	"OutputFiles": [
+		"Module.BleGoodies.cppa7.o",
+		"Module.BleGoodies.cppa8.o",
+		"Module.BleGoodies.gen.cppa7.o",
+		"Module.BleGoodies.gen.cppa8.o"
+	]
+}

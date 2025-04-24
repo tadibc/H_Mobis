@@ -1,0 +1,6 @@
+{
+	"OutputFiles": [
+		"Module.RuntimeAudioImporter.cpp.o",
+		"Module.RuntimeAudioImporter.gen.cpp.o"
+	]
+}

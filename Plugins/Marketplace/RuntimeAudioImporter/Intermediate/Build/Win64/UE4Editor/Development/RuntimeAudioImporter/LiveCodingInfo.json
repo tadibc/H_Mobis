@@ -1,0 +1,28 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.RuntimeAudioImporter.cpp.obj": [
+			"MetasoundImportedWave.cpp.obj",
+			"MetasoundImportedWaveToWaveAssetNode.cpp.obj",
+			"PreimportedSoundAsset.cpp.obj",
+			"RuntimeAudioImporter.cpp.obj",
+			"RuntimeAudioImporterLibrary.cpp.obj",
+			"ImportedSoundWave.cpp.obj",
+			"StreamingSoundWave.cpp.obj",
+			"FLACTranscoder.cpp.obj",
+			"MP3Transcoder.cpp.obj",
+			"RAWTranscoder.cpp.obj",
+			"VorbisTranscoder.cpp.obj",
+			"WAVTranscoder.cpp.obj"
+		],
+		"Module.RuntimeAudioImporter.gen.cpp.obj": [
+			"ImportedSoundWave.gen.cpp.obj",
+			"PreimportedSoundAsset.gen.cpp.obj",
+			"RuntimeAudioImporter.init.gen.cpp.obj",
+			"RuntimeAudioImporterLibrary.gen.cpp.obj",
+			"RuntimeAudioImporterTypes.gen.cpp.obj",
+			"StreamingSoundWave.gen.cpp.obj",
+			"WAVTranscoder.gen.cpp.obj"
+		]
+	}
+}

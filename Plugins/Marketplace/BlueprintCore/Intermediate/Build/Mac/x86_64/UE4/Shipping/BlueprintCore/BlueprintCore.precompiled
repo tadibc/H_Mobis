@@ -1,0 +1,6 @@
+{
+	"OutputFiles": [
+		"Module.BlueprintCore.cpp.o",
+		"Module.BlueprintCore.gen.cpp.o"
+	]
+}

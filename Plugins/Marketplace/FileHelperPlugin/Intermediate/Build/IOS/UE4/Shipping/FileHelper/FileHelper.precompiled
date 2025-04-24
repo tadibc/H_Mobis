@@ -1,0 +1,6 @@
+{
+	"OutputFiles": [
+		"Module.FileHelper.cpp.o",
+		"Module.FileHelper.gen.cpp.o"
+	]
+}

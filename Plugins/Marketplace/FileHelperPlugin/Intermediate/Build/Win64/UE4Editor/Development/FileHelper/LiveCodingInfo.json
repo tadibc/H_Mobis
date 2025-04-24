@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.FileHelper.cpp.obj": [
+			"FileHelper.cpp.obj",
+			"FileHelperBPLibrary.cpp.obj",
+			"ScreenshotUtility.cpp.obj"
+		],
+		"Module.FileHelper.gen.cpp.obj": [
+			"FileHelper.init.gen.cpp.obj",
+			"FileHelperBPLibrary.gen.cpp.obj",
+			"ScreenshotUtility.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"OutputFiles": [
+		"Module.DTAes.cppa7.o",
+		"Module.DTAes.cppa8.o",
+		"Module.DTAes.gen.cppa7.o",
+		"Module.DTAes.gen.cppa8.o"
+	]
+}

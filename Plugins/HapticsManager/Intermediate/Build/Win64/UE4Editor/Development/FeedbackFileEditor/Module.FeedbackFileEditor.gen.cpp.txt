@@ -1,0 +1,11 @@
+D:/H_Mobis/Plugins/HapticsManager/Intermediate/Build/Win64/UE4Editor/Inc/FeedbackFileEditor/FeedbackFileEditor.init.gen.cpp
+C:\UE_4.27_Oculus\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:/H_Mobis/Plugins/HapticsManager/Intermediate/Build/Win64/UE4Editor/Inc/FeedbackFileEditor/FeedbackFileFactory.gen.cpp
+D:\H_Mobis\Plugins\HapticsManager\Source\FeedbackFileEditor/Private/Factories/FeedbackFileFactory.h
+C:\UE_4.27_Oculus\Engine\Source\Editor\UnrealEd\Classes\Factories/Factory.h
+C:\UE_4.27_Oculus\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd\Factory.generated.h
+C:\UE_4.27_Oculus\Engine\Source\Editor\UnrealEd\Public\EditorReimportHandler.h
+D:\H_Mobis\Plugins\HapticsManager\Intermediate\Build\Win64\UE4Editor\Inc\FeedbackFileEditor\FeedbackFileFactory.generated.h
+D:/H_Mobis/Plugins/HapticsManager/Intermediate/Build/Win64/UE4Editor/Inc/FeedbackFileEditor/ReimportFeedbackFileFactory.gen.cpp
+D:\H_Mobis\Plugins\HapticsManager\Source\FeedbackFileEditor/Private/Factories/ReimportFeedbackFileFactory.h
+D:\H_Mobis\Plugins\HapticsManager\Intermediate\Build\Win64\UE4Editor\Inc\FeedbackFileEditor\ReimportFeedbackFileFactory.generated.h

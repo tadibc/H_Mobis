@@ -1,0 +1,87 @@
+D:\H_Mobis\Plugins\Marketplace\TinyFileDialogs\Intermediate\Build\Win64\UE4Editor\Development\TinyFileDialogs\Definitions.TinyFileDialogs.h
+D:/H_Mobis/Plugins/Marketplace/TinyFileDialogs/Source/TinyFileDialogs/Private/TinyFileDialogs.cpp
+D:\H_Mobis\Plugins\Marketplace\TinyFileDialogs\Source\TinyFileDialogs\Public\TinyFileDialogs.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Core.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformNamedPipe.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\HAL/PlatformNamedPipe.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformNamedPipe.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformCriticalSection.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\HAL/PlatformFile.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Windows/WindowsPlatformFile.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\HAL/PlatformIncludes.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/MessageDialog.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ScopedDebugInfo.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\ProfilingDebugging/ExternalProfiler.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/StringUtility.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Serialization/NameAsStringProxyArchive.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Containers/MRUArray.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Containers/TransArray.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Containers/ArrayBuilder.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/SingleThreadEvent.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\HAL/ThreadManager.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Containers/StaticBitArray.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Containers/MapBuilder.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\HAL/ThreadingBase.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Internationalization/TextLocalizationManagerGlobals.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Internationalization/Culture.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Logging/LogSuppressionInterface.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\HAL/OutputDevices.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Logging/LogScopedVerbosityOverride.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceNull.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceMemory.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceFile.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceDebug.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceArchiveWrapper.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceAnsiError.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/TimeGuard.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Serialization/LargeMemoryWriter.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Serialization/LargeMemoryData.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Serialization/LargeMemoryReader.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Serialization/BufferArchive.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Serialization/ArrayReader.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Serialization/ArrayWriter.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Serialization/BufferWriter.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/WildcardString.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Containers/CircularQueue.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceHelper.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/ScopedSlowTask.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/CallbackDevice.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/LocalTimestampDirectoryVisitor.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\UObject/BlueprintsObjectVersion.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\UObject/BuildObjectVersion.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\UObject/CoreObjectVersion.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\UObject/EditorObjectVersion.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\UObject/FrameworkObjectVersion.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\UObject/MobileObjectVersion.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\UObject/NetworkingObjectVersion.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\UObject/OnlineObjectVersion.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\UObject/PhysicsObjectVersion.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\UObject/PlatformObjectVersion.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\UObject/SequencerObjectVersion.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\UObject/VRObjectVersion.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/OutputDeviceConsole.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Core\Public\Misc/MonitoredProcess.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Projects\Public\Interfaces/IPluginManager.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Projects\Public\PluginDescriptor.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Projects\Public\ModuleDescriptor.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Projects\Public\CustomBuildSteps.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Projects\Public\LocalizationDescriptor.h
+C:\UE_4.27_Oculus\Engine\Source\Runtime\Projects\Public\PluginReferenceDescriptor.h
+D:/H_Mobis/Plugins/Marketplace/TinyFileDialogs/Source/TinyFileDialogs/Private/TinyFileDialogsLib.cpp
+D:\H_Mobis\Plugins\Marketplace\TinyFileDialogs\Source\TinyFileDialogs\Public\TinyFileDialogsLib.h
+D:\H_Mobis\Plugins\Marketplace\TinyFileDialogs\Intermediate\Build\Win64\UE4Editor\Inc\TinyFileDialogs\TinyFileDialogsLib.generated.h
+D:\H_Mobis\Plugins\Marketplace\TinyFileDialogs\Source\ThirdParty/TinyFileDialogsLibrary/TinyFileDialogs/inc/tinyfiledialogs.h
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\INCLUDE\string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\INCLUDE\xstring
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\INCLUDE\__msvc_sanitizer_annotate_container.hpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\INCLUDE\__msvc_string_view.hpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\INCLUDE\iosfwd
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\INCLUDE\cstdio
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\INCLUDE\cwchar
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\INCLUDE\xutility
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\INCLUDE\xmemory
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\INCLUDE\limits
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\INCLUDE\cfloat
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\INCLUDE\cctype

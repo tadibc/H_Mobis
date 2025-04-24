@@ -1,0 +1,229 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "Engine/DataAsset.h"
+#include "Blueprint/UserWidget.h"
+#include "NiagaraSystem.h"
+#include "MlineTriggerCustomEvent.h"
+#include "Animation/AnimSequence.h"
+#include "MlineTriggerSystemBase.generated.h"
+
+
+DECLARE_LOG_CATEGORY_EXTERN(LogMlineTriggerSystemBase, Log, All);
+
+
+UENUM(BlueprintType)
+enum class ETriggerBoxComponentType : uint8
+{
+	None, 
+	Audio UMETA(DisplayName = "Audio"),
+	Effect UMETA(DisplayName = "Effect"),
+	Animaition UMETA(DisplayName = "Animaition"),
+	UI UMETA(DisplayName = "UI"),
+	CustomEvent UMETA(DisplayName = "CustomEvent")
+};
+
+UENUM(BlueprintType)
+enum class EEffectType : uint8
+{
+	ParticleSystem UMETA(DisplayName = "ParticleSystem"),
+	NiagaraSystem UMETA(DisplayName = "NiagaraSystem")
+};
+
+
+enum class EEffectLocation : uint8
+{
+	Default UMETA(DisplayName = "Default"),
+	Target UMETA(DisplayName = "Target"),
+	Location UMETA(DisplayName = "Location")
+};
+
+
+UENUM(BlueprintType)
+enum class EAnimationEndType : uint8
+{
+	Keep UMETA(DisplayName = "Keep"),
+	Return UMETA(DisplayName = "Return"),
+
+};
+USTRUCT(BlueprintType)
+struct FTriggerSystemDataBase
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystem|Base")
+		float StartTime = 0.0f;
+};
+
+USTRUCT(BlueprintType)
+struct FAudioData : public FTriggerSystemDataBase
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystem|AudioData")
+		USoundBase* Sound;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystem|AudioData")
+		USoundAttenuation* SoundAttenuation;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystem|AudioData")
+		float Volume = 1.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystem|AudioData")
+		float Pitch = 1.0f;
+	//UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	//	float StartTime = 0.0f;
+
+};
+
+USTRUCT(BlueprintType)
+struct FEffectData : public FTriggerSystemDataBase
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystem|EffectData")
+		EEffectType EffectType;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (Editcondition = "EffectType == EEffectType::ParticleSystem", EditConditionHides), Category = "TriggerSystem|EffectData")
+		UParticleSystem* ParticleSystem;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (Editcondition = "EffectType == EEffectType::NiagaraSystem", EditConditionHides), Category = "TriggerSystem|EffectData")
+		UNiagaraSystem* NiagaraSystem;
+
+};
+
+
+USTRUCT(BlueprintType)
+struct FAnimationData : public FTriggerSystemDataBase
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystem|AnimationData")
+		AActor* AnimationTargerActor;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (Editcondition = "false", EditConditionHides), Category = "TriggerSystem|AnimationData")
+		FString AnimationTargerActorName;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (Editcondition = "false", EditConditionHides), Category = "TriggerSystem|AnimationData")
+		TSubclassOf<class AActor> AnimationTargerActorClass;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystem|AnimationData")
+		UAnimSequence* AnimSequence;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystem|AnimationData")
+		bool isLooping;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystem|AnimationData")
+		EAnimationEndType AnimationEndType;
+
+
+};
+
+USTRUCT(BlueprintType)
+struct FUIData : public FTriggerSystemDataBase
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystem|UIData")
+		AActor* AttachedActor;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (Editcondition = "false", EditConditionHides), Category = "TriggerSystem|UIData")
+		FString AttachedActorName;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (Editcondition = "false", EditConditionHides), Category = "TriggerSystem|UIData")
+		TSubclassOf<class AActor>AttachedActorClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystem|UIData")
+		TSubclassOf<class UUserWidget> WidgetClass;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystem|UIData")
+		bool AutoDestroy;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (Editcondition = "AutoDestroy", EditConditionHides), Category = "TriggerSystem|UIData")
+		float DestroyTime = 3;
+
+
+};
+
+USTRUCT(BlueprintType)
+struct FCustomEventData : public FTriggerSystemDataBase
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystem|CustomEventData")
+		AActor* CustomEventActor;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (Editcondition = "false", EditConditionHides), Category = "TriggerSystem|CustomEventData")
+		FString CustomEventActorName;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (Editcondition = "false", EditConditionHides), Category = "TriggerSystem|CustomEventData")
+		TSubclassOf<class AActor> CustomEventActorClass;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystem|CustomEventData")
+		FString FunctionName;
+	//UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (Editcondition = "", EditConditionHides))
+	//	TScriptInterface<UInterface> Interface;
+
+};
+
+
+
+
+
+
+USTRUCT(BlueprintType)
+struct FTriggerSystemComponentData
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystemComponentData")
+		ETriggerBoxComponentType Component;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (Editcondition = "Component == ETriggerBoxComponentType::Audio", EditConditionHides), Category = "TriggerSystemComponentData")
+		FAudioData AudioData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (Editcondition = "Component == ETriggerBoxComponentType::Effect", EditConditionHides), Category = "TriggerSystemComponentData")
+		FEffectData EffectData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (Editcondition = "Component == ETriggerBoxComponentType::Animaition", EditConditionHides), Category = "TriggerSystemComponentData")
+		FAnimationData AnimationData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (Editcondition = "Component == ETriggerBoxComponentType::UI", EditConditionHides), Category = "TriggerSystemComponentData")
+		FUIData UIData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (Editcondition = "Component == ETriggerBoxComponentType::CustomEvent", EditConditionHides), Category = "TriggerSystemComponentData")
+		TArray<FCustomEventData> CustomEventDatas;
+
+
+};
+USTRUCT(BlueprintType)
+struct FTriggerSystemComponentArray
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TriggerSystemComponentArray")
+		TArray<FName> ComponentArray;
+};
+
+
+UCLASS()
+class MLINECOREPLUGIN_API AMlineTriggerSystemBase : public AActor
+{
+	GENERATED_BODY()
+	
+public:	
+	// Sets default values for this actor's properties
+	AMlineTriggerSystemBase();
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+public:	
+	// Called every frame
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TriggerBoxComponentDataMap")
+		TMap<FName, FTriggerSystemComponentData> TriggerBoxComponentDataAtMap;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (Editcondition = "false", EditConditionHides), Category = "ConditionMap")
+		TMap<FName, USceneComponent*> Components;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="ConditionMap")
+		TMap<FString, FTriggerSystemComponentArray> ConditionMap;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ConditionMap")
+		class UBoxComponent* boxtt;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ConditionMap")
+		TSubclassOf<class UBoxComponent> tt;
+
+	virtual void Tick(float DeltaTime) override;
+
+	virtual void OnConstruction(const FTransform& Transform) override;
+private:
+	int ActorSetting(FName key, AActor** TargetActor, TSubclassOf<AActor>* actorClass, FString* actorName);
+
+};

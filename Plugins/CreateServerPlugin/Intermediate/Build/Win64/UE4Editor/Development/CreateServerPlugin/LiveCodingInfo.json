@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CreateServerPlugin.cpp.obj": [
+			"CreateServerPlugin.cpp.obj",
+			"ServerFunctionLibrary.cpp.obj"
+		],
+		"Module.CreateServerPlugin.gen.cpp.obj": [
+			"CreateServerPlugin.init.gen.cpp.obj",
+			"ServerFunctionLibrary.gen.cpp.obj"
+		]
+	}
+}

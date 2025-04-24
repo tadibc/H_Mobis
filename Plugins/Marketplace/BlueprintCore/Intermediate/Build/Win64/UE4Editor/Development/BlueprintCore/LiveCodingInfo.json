@@ -1,0 +1,18 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.BlueprintCore.cpp.obj": [
+			"BlueprintCoreBlueprint.cpp.obj",
+			"BlueprintCoreHelpers.cpp.obj",
+			"BlueprintCoreModule.cpp.obj",
+			"BlueprintCoreSettings.cpp.obj",
+			"BlueprintCoreTypes.cpp.obj"
+		],
+		"Module.BlueprintCore.gen.cpp.obj": [
+			"BlueprintCore.init.gen.cpp.obj",
+			"BlueprintCoreBlueprint.gen.cpp.obj",
+			"BlueprintCoreSettings.gen.cpp.obj",
+			"BlueprintCoreTypes.gen.cpp.obj"
+		]
+	}
+}

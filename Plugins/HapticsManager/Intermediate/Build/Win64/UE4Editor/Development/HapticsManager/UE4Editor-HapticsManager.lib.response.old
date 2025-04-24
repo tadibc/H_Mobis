@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-HapticsManager.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\H_Mobis2\Plugins\HapticsManager\Intermediate\Build\Win64\UE4Editor\Development\HapticsManager\PCH.HapticsManager.h.obj"
+"D:\H_Mobis2\Plugins\HapticsManager\Intermediate\Build\Win64\UE4Editor\Development\HapticsManager\Module.HapticsManager.cpp.obj"
+"D:\H_Mobis2\Plugins\HapticsManager\Intermediate\Build\Win64\UE4Editor\Development\HapticsManager\Module.HapticsManager.gen.cpp.obj"
+"C:\UE_4.27_Oculus\Engine\Intermediate\Build\Win64\UE4Editor\Development\Default.rc2.res"
+/OUT:"D:\H_Mobis2\Plugins\HapticsManager\Intermediate\Build\Win64\UE4Editor\Development\HapticsManager\UE4Editor-HapticsManager.lib"

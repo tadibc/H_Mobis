@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.DTAes.cpp.obj": [
+			"DTAes.cpp.obj",
+			"DTAesLib.cpp.obj"
+		],
+		"Module.DTAes.gen.cpp.obj": [
+			"DTAes.init.gen.cpp.obj",
+			"DTAesLib.gen.cpp.obj"
+		]
+	}
+}

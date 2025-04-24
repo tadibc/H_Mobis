@@ -1,0 +1,8 @@
+{
+	"OutputFiles": [
+		"Module.FileHelper.cppa7.o",
+		"Module.FileHelper.cppa8.o",
+		"Module.FileHelper.gen.cppa7.o",
+		"Module.FileHelper.gen.cppa8.o"
+	]
+}

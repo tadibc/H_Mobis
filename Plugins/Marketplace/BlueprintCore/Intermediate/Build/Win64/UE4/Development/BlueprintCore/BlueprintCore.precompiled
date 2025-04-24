@@ -1,0 +1,7 @@
+{
+	"OutputFiles": [
+		"PCH.BlueprintCore.h.obj",
+		"Module.BlueprintCore.cpp.obj",
+		"Module.BlueprintCore.gen.cpp.obj"
+	]
+}

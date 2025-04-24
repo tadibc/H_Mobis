@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-MlineCorePlugin.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\UE_4.27_Oculus\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\H_Mobis\Plugins\MlineCorePlugin\Intermediate\Build\Win64\UE4Editor\Development\MlineCorePlugin\Module.MlineCorePlugin.cpp.obj"
+"D:\H_Mobis\Plugins\MlineCorePlugin\Intermediate\Build\Win64\UE4Editor\Development\MlineCorePlugin\Module.MlineCorePlugin.gen.cpp.obj"
+"C:\UE_4.27_Oculus\Engine\Intermediate\Build\Win64\UE4Editor\Development\Default.rc2.res"
+/OUT:"D:\H_Mobis\Plugins\MlineCorePlugin\Intermediate\Build\Win64\UE4Editor\Development\MlineCorePlugin\UE4Editor-MlineCorePlugin.lib"

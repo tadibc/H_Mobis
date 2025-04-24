@@ -1,0 +1,8 @@
+{
+	"OutputFiles": [
+		"Module.UniversalVoiceChatPro.cppa7.o",
+		"Module.UniversalVoiceChatPro.cppa8.o",
+		"Module.UniversalVoiceChatPro.gen.cppa7.o",
+		"Module.UniversalVoiceChatPro.gen.cppa8.o"
+	]
+}

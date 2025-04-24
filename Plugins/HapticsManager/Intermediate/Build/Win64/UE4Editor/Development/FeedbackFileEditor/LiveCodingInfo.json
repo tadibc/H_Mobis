@@ -1,0 +1,22 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.FeedbackFileEditor.cpp.obj": [
+			"FeedbackFileActions.cpp.obj",
+			"FootFileActions.cpp.obj",
+			"GloveFileActions.cpp.obj",
+			"HandFileActions.cpp.obj",
+			"TactalFileActions.cpp.obj",
+			"TactosyFileActions.cpp.obj",
+			"TactotFileActions.cpp.obj",
+			"FeedbackFileFactory.cpp.obj",
+			"ReimportFeedbackFileFactory.cpp.obj",
+			"FeedbackFileEditor.cpp.obj"
+		],
+		"Module.FeedbackFileEditor.gen.cpp.obj": [
+			"FeedbackFileEditor.init.gen.cpp.obj",
+			"FeedbackFileFactory.gen.cpp.obj",
+			"ReimportFeedbackFileFactory.gen.cpp.obj"
+		]
+	}
+}
